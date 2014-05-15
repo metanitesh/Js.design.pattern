@@ -1,16 +1,22 @@
 /*rented constructor: copies properties 
 but not prototype*/
 
-var Parent = function(name){
-	this.name = name || "adam";
+var Cat = function(){
+	this.legs = 4;
+	this.say = function(){
+		return "meow";
+	};
 };
 
-Parent.prototype.say = function(){
-	return this.name;
+var Bird = function(){
+	this.wings = 2;
+	this.fly = true;
 };
 
-var Child = function(name){
-	console.log(this);
-	Parent.apply(this, arguments);
+var Hybrid = function(){
+	Cat.apply(this);
+	Bird.apply(this);
 };
 
+var pita = new Hybrid();
+console.log(pita);
