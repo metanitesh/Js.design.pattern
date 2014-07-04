@@ -13,4 +13,4 @@ var obj = {
 	}
 };
 
-obj.increment().add(2).shout() //4
+obj.increment().add(2).shout(); //4
