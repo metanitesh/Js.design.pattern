@@ -1,3 +1,5 @@
+/*chaining - return this after method call */
+
 var obj = {
 	value : 1,
 	increment : function(){

@@ -1,3 +1,5 @@
+/* init time branching - commonly used to normalize browser differences  */
+
 var util = {
 	addListener: null,
 	removeListener: null

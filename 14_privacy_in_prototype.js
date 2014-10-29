@@ -1,3 +1,5 @@
+/*privacy in prototype: we can use self invoking function to give prototype privacy */
+
 var Gadget = function(){
 
 	/*private*/

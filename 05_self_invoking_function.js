@@ -1,3 +1,5 @@
+/* self invoking function - to create a local scope. */
+
 (function(){
 	console.log("sandbox area")
 }());

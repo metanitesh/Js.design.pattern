@@ -1,3 +1,5 @@
+/*enforcing new : reinforcing new inside Class to avoid global creation */
+
 var Car = function(){
 	/* we can also use argument.callee 
 	instead of constructor name */  

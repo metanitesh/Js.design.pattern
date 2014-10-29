@@ -1,3 +1,5 @@
+/*factory - passing object instantiation responsibility to factory method*/
+
 var CarMaker = function(){
 
 };
@@ -10,20 +12,10 @@ CarMaker.factory = function(type){
 	var constr = type;
 	var newcar;
 
-	if(typeof CarMaker[constr] !== "function"){
-		throw {
-			name : "error",
-			message : constr + "doesn't exist"
-		};
-	}
-
-	if(typeof CarMaker[constr].prototype.drive !== "function"){
-		CarMaker[constr].prototype = new CarMaker();
-	}
-
 	CarMaker[constr].prototype = new CarMaker();
-	newcar = new CarMaker[constr];
+	newcar = new CarMaker[constr]();
 	return newcar;
+
 };
 
 CarMaker.Compact = function(){

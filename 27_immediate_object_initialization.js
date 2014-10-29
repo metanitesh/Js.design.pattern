@@ -1,3 +1,5 @@
+/* immediate object initialization */
+
 ({
 	maxWidth : 600,
 	maxHeight : 800,

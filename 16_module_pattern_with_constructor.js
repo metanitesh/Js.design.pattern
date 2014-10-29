@@ -1,3 +1,5 @@
+/* module pattern using constructor: module pattern dialect with prototype and constructor */
+
 //using namespace pattern
 MYAPP.namespace('MYAPP.utilities.Array');
 

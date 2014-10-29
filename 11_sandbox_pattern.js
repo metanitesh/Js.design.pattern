@@ -1,4 +1,4 @@
-//alternative to namespace pattern 
+/*sandbox pattern - alternative to namespace pattern, a simpler version of dependencies injection*/
 
 function Sandbox() {
 

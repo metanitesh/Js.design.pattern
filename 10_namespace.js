@@ -1,3 +1,5 @@
+/*namespace pattern - convert given string into hierarchical objects  */
+
 var namespace = function(ns_string){
 	var parts = ns_string.split(".");
 	var parent = MYAPP = {};

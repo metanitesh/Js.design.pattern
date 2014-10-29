@@ -1,3 +1,5 @@
+/*klass pattern - allow user to pass parent Class and property bbject*/
+
 var klass = function(Parent, props) {
 	var Child;
 

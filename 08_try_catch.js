@@ -1,3 +1,5 @@
+/* try catch - simple error handling */
+
 var handleError = function() {
 	console.log("handle error here")
 }

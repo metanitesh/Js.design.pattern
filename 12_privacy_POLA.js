@@ -1,3 +1,5 @@
+/*private member - use function scope as a private member scope and only expose what you need*/
+
 var Gadget = function(){
 
 	//private member

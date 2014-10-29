@@ -1,3 +1,5 @@
+/* singelton : all the instances from the class refer to same same object */
+
 /*using static property*/
 var Universe = function(){
 	if(typeof Universe.instance === "object"){

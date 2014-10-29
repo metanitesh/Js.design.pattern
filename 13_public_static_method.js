@@ -1,3 +1,5 @@
+/*public static method: assign method directly to constructor*/
+
 var Gadgets = function(){
 };
 

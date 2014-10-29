@@ -1,4 +1,4 @@
-/* when client needs a different interface */
+/* adapter pattern - when a client interface doesn't match application interface an adapter for that interface can be created  */
 
 var clietObject = {
 	string1 : "foo",

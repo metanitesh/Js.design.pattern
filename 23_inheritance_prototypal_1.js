@@ -1,3 +1,5 @@
+/*prototypal inheritance */
+
 var Model = {
 	
 	prototype: {

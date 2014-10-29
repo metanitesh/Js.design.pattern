@@ -1,3 +1,5 @@
+/* observer - when a series of subscriber can listen to a publisher and than react when publisher fires an event */
+
 var Publisher = {
 	subscirbers: {
 		any: []

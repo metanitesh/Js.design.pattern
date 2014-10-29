@@ -1,3 +1,5 @@
+/*inheritance by temporary constructor*/
+
 var inherit = function(C,P){
 	var F = function(){};
 	F.prototype = P.prototype;

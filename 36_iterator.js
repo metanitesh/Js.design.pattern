@@ -1,3 +1,5 @@
+/* iterator pattern - iterating a data structure manually using iteration interface */
+
 var agg = (function(){
 	var index = 0;
 	var data = [1,2,3,4,5,6];

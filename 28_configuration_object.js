@@ -1,3 +1,6 @@
+/* config object - avoid using more than 3 parameter in function instead use config object*/
+
+
 var config = {
 	firstname : "nitesh",
 	lastname: "sharma",

@@ -1,3 +1,5 @@
+/*hasOwnProperty - use it to avoid the following scenario */
+
 Object.prototype.clone = function(){
 	//clone this object;
 	console.log("cloned"); 

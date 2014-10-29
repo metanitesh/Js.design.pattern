@@ -1,3 +1,5 @@
+/*module pattern : simple object creating pattern without using constructor and prototype*/
+
 //using namespace pattern 
 MYAPP.namespace("MYAPP.utilities.array");
 

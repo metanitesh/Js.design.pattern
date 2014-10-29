@@ -1,5 +1,5 @@
-/* keep the orignal method small 
-but combined them inside facade*/
+/* facade  : combining several small method inside one facade method */
+
 var myEvent = {
 	stop : function(e){
 		e.preventDefault();

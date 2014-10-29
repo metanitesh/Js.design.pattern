@@ -1,3 +1,5 @@
+/*mixin - mixing property from different objects */
+
 var mix = function(){
 	var child = {};
 

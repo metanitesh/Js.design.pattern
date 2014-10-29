@@ -1,5 +1,4 @@
-/*rented constructor: copies properties 
-but not prototype*/
+/*rented constructor: interesting pattern to copies properties */
 
 var Cat = function(){
 	this.legs = 4;

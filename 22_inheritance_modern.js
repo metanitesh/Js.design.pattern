@@ -1,4 +1,5 @@
-/*or use Object.create*/
+/*Object.create replication - base of any prototypical inheritance*/
+
 var object = function(o){
 	var F = function(){};
 	F.prototype = o;
