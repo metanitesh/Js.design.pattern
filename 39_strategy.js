@@ -1,11 +1,9 @@
+/* strategy - allow several alorithim to be interchangable at run time */
+
 var validator = {
-
 	types: {},
-
 	message: [],
-
-	config: {},
-
+	config: {}
 };
 
 
@@ -16,7 +14,7 @@ validator.validate = function(data) {
 	var type;
 	var checker;
 	var result_ok;
-	// console.log(this.types)
+
 	this.message = [];
 
 	for (i in data) {
@@ -28,7 +26,6 @@ validator.validate = function(data) {
 		if (!type) {
 			continue;
 		}
-		// console.log(type)
 
 		if (!checker) {
 			throw new Error("validation error : no handler");

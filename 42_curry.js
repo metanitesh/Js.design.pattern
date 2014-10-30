@@ -1,3 +1,5 @@
+/* curry pattern - partial function calling */
+
 var curryMe = function (fn) {
 	var slice = Array.prototype.slice;
 	var stores_args = slice.call(arguments, 1);

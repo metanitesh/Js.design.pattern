@@ -1,3 +1,5 @@
+/* decorator pattern - enhancing an object behavior on runtime */
+
 var Sale = function(price){
 	this.price = price;
 };
@@ -15,6 +17,8 @@ Sale.prototype.decorate = function(decorator){
 
 	F.prototype = this;
 	newObj  = new F();
+
+	console.log()
 	newObj.uber = F.prototype;
 	for( i in overrides){
 		if(overrides.hasOwnProperty(i)){

@@ -1,3 +1,5 @@
+/* Promise - basic internals of promises API */
+
 var Promise = function(){
 
     var done = [];
@@ -29,6 +31,6 @@ var Promise = function(){
     }
 }
 
-var promise  = new Promise();
-console.log(promise)
+
+
 

@@ -1,3 +1,5 @@
+/* borrow and bind - internal of common jquery proxy method */
+
 var bind = function(o, m) {
 	return function(){
 		return m.apply(o, [].slice.call(arguments));
