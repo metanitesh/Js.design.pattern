@@ -1,12 +1,12 @@
 /* iterator pattern - iterating a data structure manually using iteration interface */
 
-var agg = (function(){
+var agg = ((() => {
 	var index = 0;
 	var data = [1,2,3,4,5,6];
 	var length = data.length;
 
 	return {
-		next: function(){
+		next() {
 			var element;
 			if(!this.hasNext()){
 				return null;
@@ -17,17 +17,17 @@ var agg = (function(){
 			return element;
 
 		},
-		hasNext: function(){
+		hasNext() {
 			return index<length;
 		},
-		rewind: function(){
+		rewind() {
 			index = 0;
 		},
-		current: function(){
+		current() {
 			return data[index];
 		}
 	};
-}());
+})());
 
 console.log(agg.next());
 console.log(agg.next());

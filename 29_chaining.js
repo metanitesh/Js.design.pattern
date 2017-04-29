@@ -2,15 +2,15 @@
 
 var obj = {
 	value : 1,
-	increment : function(){
+	increment() {
 		this.value ++;
 		return this;
 	},
-	add : function(v){
+	add(v) {
 		this.value += v;
 		return this;
 	},
-	shout : function(){
+	shout() {
 		console.log(this.value);
 	}
 };

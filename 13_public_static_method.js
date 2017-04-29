@@ -1,13 +1,11 @@
 /*public static method: assign method directly to constructor*/
 
-var Gadgets = function(){
+var Gadgets = () => {
 };
 
 //static method
-Gadgets.isShiny = function(){
-	//this will point to constructor here
-	return "you bet";
-};
+Gadgets.isShiny = () => //this will point to constructor here
+"you bet";
 
 Gadgets.prototype.setPrice = function(price){
 	this.price = price;

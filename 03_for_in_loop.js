@@ -1,6 +1,6 @@
 /*hasOwnProperty - use it to avoid the following scenario */
 
-Object.prototype.clone = function(){
+Object.prototype.clone = () => {
 	//clone this object;
 	console.log("cloned"); 
 }
@@ -9,7 +9,7 @@ var car = {
 	doors : 4,
 	windows : 4,
 	engine : 1,
-	hasOwnProperty: function(){
+	hasOwnProperty() {
 
 	}
 }

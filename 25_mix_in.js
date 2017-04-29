@@ -1,12 +1,12 @@
 /*mixin - mixing property from different objects */
 
-var mix = function(){
+var mix = function(...args) {
 	var child = {};
 
-	for(var i=0, max=arguments.length; i<max; i++){
-		for(var prop in arguments[i]){
-			if(arguments[i].hasOwnProperty(prop)){
-				child[prop] = arguments[i][prop];
+	for(var i=0, max=args.length; i<max; i++){
+		for(var prop in args[i]){
+			if(args[i].hasOwnProperty(prop)){
+				child[prop] = args[i][prop];
 			}
 		}
 	}

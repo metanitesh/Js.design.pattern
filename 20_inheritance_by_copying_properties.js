@@ -1,5 +1,5 @@
 //shallow copy
-var extend = function(parent, child){
+var extend = (parent, child) => {
 	var child = child || {};
 	for (var i in parent){
 		if(parent.hasOwnProperty(i)){
@@ -11,7 +11,7 @@ var extend = function(parent, child){
 };
 
 //deep copy
-var extendDeep = function(parent, child){
+var extendDeep = (parent, child) => {
 	var toStr = Object.prototype.toString;
 	astr = "[object Array]";
 

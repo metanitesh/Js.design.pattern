@@ -13,7 +13,7 @@ Player.prototype.play = function(){
 var scoreboard = {
 	element : $("#result"),
 
-	update: function(score){
+	update(score) {
 		var i;
 		var msg = "";
 		for (i in score){
@@ -28,14 +28,14 @@ var scoreboard = {
 var mediator = {
 	players : {},
 
-	setup : function(){
+	setup() {
 		var players = this.players;
 		players.home = new Player("Home");
 		players.guest = new Player("Guest")
 
 	},
 
-	played: function(){
+	played() {
 		var players = this.players;
 		var score = {
 			Home: players.home.points,
@@ -45,7 +45,7 @@ var mediator = {
 		scoreboard.update(score);
 	},
 
-	keypress: function(e){
+	keypress(e) {
 		if(e.which === 49){
 			mediator.players.home.play();
 			return;

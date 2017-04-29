@@ -1,6 +1,6 @@
-var person = function(){
+var person = () => {
 	console.log("monkey");
-	person = function(){
+	person = () => {
 		console.log("human");
 	};
 };

@@ -1,21 +1,21 @@
 /*klass pattern - allow user to pass parent Class and property bbject*/
 
-var klass = function(Parent, props) {
+var klass = (Parent, props) => {
 	var Child;
 
-	Child = function() {
+	Child = function(...args) {
 		if (Child.uber && Child.uber.hasOwnProperty("__constructor")) {
-			Child.uber.__constructor.apply(this, arguments);
+			Child.uber.__constructor.apply(this, args);
 		}
 
 		if (Child.prototype.hasOwnProperty("__constructor")) {
-			Child.prototype.__constructor.apply(this, arguments);
+			Child.prototype.__constructor.apply(this, args);
 		}
 
 	};
 	Parent = Parent || Object;
 
-	var F = function() {};
+	var F = () => {};
 	F.prototype = Parent.prototype;
 	Child.prototype = new F();
 	Child.uber = Parent.prototype;
@@ -34,17 +34,17 @@ var klass = function(Parent, props) {
 
 
 var Man = klass(null, {
-	__constructor: function(name) {
+	__constructor(name) {
 		console.log("man");
 		this.name = name;
 	},
-	getName: function() {
+	getName() {
 		console.log(this.name);
 	}
 });
 
 var SuperMan = klass(Man, {
-	__constructor: function(name) {
+	__constructor(name) {
 		console.log("SuperMan");
 		this.name = name;
 	}

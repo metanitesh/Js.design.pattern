@@ -17,7 +17,7 @@ var Universe = function(){
 /*using immediate function */
 var Universe;
 
-(function(){
+((() => {
 	var instance;
 
 	Universe = function(){
@@ -31,7 +31,7 @@ var Universe;
 		this.bang = "big";
 	};
 
-}());
+})());
 
 
 var uni = new Universe();

@@ -46,14 +46,14 @@ validator.hasError = function(){
 };
 
 validator.types.isNonEmpty = {
-	validate: function(value) {
+	validate(value) {
 		return value !== "";
 	},
 	instruction: "the value can not be empty"
 };
 
 validator.types.isNumber = {
-	validate: function(value) {
+	validate(value) {
 		return /[0-9]/.test(value);
 	},
 	instruction: "the value can only be number"

@@ -1,6 +1,6 @@
 var state = "global";
 
-var hoistMe = function(){
+var hoistMe = () => {
 
 	console.log(state); //undefined (hoisiting)
 	var state = "local";

@@ -7,15 +7,15 @@ var Scope = function(){
 
 Scope.prototype = {
 
-    watch: function(watchFn, listFn){
+    watch(watchFn, listFn) {
         this.watchCollection.push({
             watcher: watchFn, 
             listener: listFn
         });        
     },
 
-    digest: function(){
-        this.watchCollection.forEach(function(watchObj){
+    digest() {
+        this.watchCollection.forEach(watchObj => {
 
             var newVal = watchObj.watcher();
             var oldVal = this.watchCollection.last;
@@ -25,7 +25,7 @@ Scope.prototype = {
                 watchObj.listener()    
             }
                         
-        }.bind(this))
+        })
     }
 }
 
@@ -33,11 +33,9 @@ Scope.prototype = {
 
 var scope = new Scope();
 scope.title = "nike";
-var watchFn = function(){
-    return scope.title;
-}
+var watchFn = () => scope.title
 
-var listFn = function(){
+var listFn = () => {
    console.log("title changed");
 }
 
