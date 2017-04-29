@@ -1,14 +1,12 @@
 /* borrow and bind - internal of common jquery proxy method */
 
-var bind = function(o, m) {
-	return function(){
-		return m.apply(o, [].slice.call(arguments));
-	};
+var bind = (o, m) => function(...args) {
+    return m.apply(o, [].slice.call(args));
 };
 
 var one = {
 	name: "one",
-	say: function(greet) {
+	say(greet) {
 		return greet + ", " + this.name ;
 	}
 };

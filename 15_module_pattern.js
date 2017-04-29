@@ -4,7 +4,7 @@
 MYAPP.namespace("MYAPP.utilities.array");
 
 
-MYAPP.utilities.array = (function(){
+MYAPP.utilities.array = ((() => {
 	
 	//dependencies declaration patter
 	var uobj = MYAPP.utilities.object;
@@ -15,7 +15,7 @@ MYAPP.utilities.array = (function(){
 	var ops = Object.prototype.toString;
 	
 	//private method 
-	var isArray = function(){
+	var isArray = () => {
 
 	};
 
@@ -23,13 +23,13 @@ MYAPP.utilities.array = (function(){
 
 	//public api
 	return {
-		inArray : function(){
+		inArray() {
 			//logic
 		},
 
-		indexOf : function(){
+		indexOf() {
 			
 		}
 	};
 
-}());
+})());

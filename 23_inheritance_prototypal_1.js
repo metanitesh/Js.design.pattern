@@ -3,20 +3,20 @@
 var Model = {
 	
 	prototype: {
-		init: function() {
+		init() {
 			console.log("instantiate user");
 		}
 	},
-	create: function() {
+	create() {
 		var object = Object.create(this);
 		object.parent = this;
 		return object;
 	},
 
-	init: function() {
+	init(...args) {
 		var instance = Object.create(this.prototype);
 		instance.parent = this;
-		instance.init.apply(instance,arguments);
+		instance.init(...args);
 		return instance;
 	}
 

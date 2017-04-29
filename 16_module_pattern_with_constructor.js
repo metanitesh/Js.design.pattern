@@ -3,7 +3,7 @@
 //using namespace pattern
 MYAPP.namespace('MYAPP.utilities.Array');
 
-MYAPP.utilities.Array = (function () {
+MYAPP.utilities.Array = ((() => {
 	// dependencies
 	var uobj = MYAPP.utilities.object;
 	var ulang = MYAPP.utilities.lang;
@@ -17,13 +17,13 @@ MYAPP.utilities.Array = (function () {
 	Constr.prototype = {
 		constructor : MYAPP.utilities.Array,
 		version : "2.0",
-		toArray : function(obj){
+		toArray(obj) {
 			//logic here
 		}
 	};
 
 	return Constr;
 
-}());
+})());
 
 var arr = new MYAPP.utilities.Array(obj);

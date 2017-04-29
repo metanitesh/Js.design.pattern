@@ -1,9 +1,9 @@
 util = {
-		defClass: function(prototype) {
+		defClass(prototype) {
 
 			var constructor = prototype.constructor;
 			
-			constructor.extend = function(obj) {
+			constructor.extend = obj => {
 				for (var prop in obj) {
 					constructor[prop] = obj[prop];
 				}
@@ -12,7 +12,7 @@ util = {
 			return constructor;
 		},
 
-		extend: function(constructor, keys) {
+		extend(constructor, keys) {
 			var superType = keys.super = constructor.prototype;
 			var prototype = Object.create(superType);
 			for (var key in keys) prototype[key] = keys[key];

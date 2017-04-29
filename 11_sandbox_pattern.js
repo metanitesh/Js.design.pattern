@@ -33,12 +33,12 @@ function Sandbox() {
 Sandbox.prototype = {
 	name: "My application",
 	version: "1.0",
-	getName: function() {
+	getName() {
 		return this.name;
 	}
 };
 
-Sandbox(["dom", "ajax"], function(box){
+Sandbox(["dom", "ajax"], box => {
 	/*box will have all the property from dom and ajax
 	and could write a peice of functionality here using
 	these two modules 	

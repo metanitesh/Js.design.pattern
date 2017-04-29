@@ -10,16 +10,16 @@ var Gadget = function(){
 	};
 };
 
-Gadget.prototype = (function(){
+Gadget.prototype = ((() => {
 	
 	/*private and shared in prototype*/
 	var browser = "webkit";
 
 	return {
-		getBrowser : function(){
+		getBrowser() {
 			return browser;
 		}
 	};
-}());
+})());
 
 var tool = new Gadget();

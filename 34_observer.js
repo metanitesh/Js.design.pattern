@@ -5,7 +5,7 @@ var Publisher = {
 		any: []
 	},
 
-	subscribe: function(fn, type) {
+	subscribe(fn, type) {
 
 		type = type || "any";
 		if (typeof this.subscirbers[type] === "undefined") {
@@ -15,13 +15,13 @@ var Publisher = {
 		this.subscirbers[type].push(fn);
 	},
 
-	unsubscribe: function(fn, type) {
+	unsubscribe(fn, type) {
 		if (typeof this.subscirbers[type] !== undefined) {
 			this.subscirbers[type].pull(fn);
 		}
 	},
 
-	publish: function(type, obj) {
+	publish(type, obj) {
 		var subscribers = this.subscirbers[type];
 
 		for (var i = 0, max = subscribers.length; i < max; i++) {
@@ -33,7 +33,7 @@ var Publisher = {
 
 var paper = Object.create(Publisher);
 var joe = {
-	shout : function(obj){
+	shout(obj) {
 		console.log("oh i got issue" + obj);
 	}
 };

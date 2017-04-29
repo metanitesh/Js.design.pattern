@@ -9,7 +9,7 @@ Sale.prototype.getPrice = function(){
 };
 
 Sale.prototype.decorate = function(decorator){
-	var F = function(){};
+	var F = () => {};
 	var overrides = Sale.decorators[decorator];
 
 	var i;
@@ -31,7 +31,7 @@ Sale.prototype.decorate = function(decorator){
 
 Sale.decorators = {};
 Sale.decorators.tax = {
-	getPrice : function(){
+	getPrice() {
 		var price = this.uber.getPrice();
 		price += price*10;
 		return price;
@@ -39,7 +39,7 @@ Sale.decorators.tax = {
 };
 
 Sale.decorators.ietax = {
-	getPrice : function(){
+	getPrice() {
 		var price = this.uber.getPrice();
 		price += price*10;
 		return price;

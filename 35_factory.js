@@ -1,6 +1,6 @@
 /*factory - passing object instantiation responsibility to factory method*/
 
-var CarMaker = function(){
+var CarMaker = () => {
 
 };
 
@@ -8,7 +8,7 @@ CarMaker.prototype.drive = function(){
 	return this.doors;
 };
 
-CarMaker.factory = function(type){
+CarMaker.factory = type => {
 	var constr = type;
 	var newcar;
 

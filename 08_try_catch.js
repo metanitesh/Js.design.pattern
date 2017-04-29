@@ -1,6 +1,6 @@
 /* try catch - simple error handling */
 
-var handleError = function() {
+var handleError = () => {
 	console.log("handle error here")
 }
 

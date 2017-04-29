@@ -3,10 +3,10 @@
 ({
 	maxWidth : 600,
 	maxHeight : 800,
-	gimmeMax : function(){
+	gimmeMax() {
 		return this.maxWidth + "x" + this.maxHeight
 	},
-	init : function(){
+	init() {
 		console.log(this.gimmeMax());
 	}
 }).init();

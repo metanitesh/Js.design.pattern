@@ -2,9 +2,7 @@
 
 var Cat = function(){
 	this.legs = 4;
-	this.say = function(){
-		return "meow";
-	};
+	this.say = () => "meow";
 };
 
 var Bird = function(){

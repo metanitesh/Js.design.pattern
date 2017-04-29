@@ -1,7 +1,7 @@
 /*inheritance by temporary constructor*/
 
-var inherit = function(C,P){
-	var F = function(){};
+var inherit = (C, P) => {
+	var F = () => {};
 	F.prototype = P.prototype;
 	C.prototype = new F();
 	C.uber  = P.prototype;

@@ -16,7 +16,7 @@ var Promise = function(){
     }
 
     this.resolve = function(result){
-        done.forEach(function(fn){
+        done.forEach(fn => {
             fn(result);
         })
         return this;
@@ -24,7 +24,7 @@ var Promise = function(){
 
     
     this.fail =  function(){
-        fail.forEach(function(fn){
+        fail.forEach(fn => {
             fn(result);
         })
         return this;

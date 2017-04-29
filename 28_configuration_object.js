@@ -9,7 +9,7 @@ var config = {
 	type: "developer"
 }
 
-var addPerson = function(config){
+var addPerson = config => {
 	console.log(config.firstname +" is "+ config.type)
 }
 

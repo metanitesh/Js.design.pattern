@@ -1,14 +1,14 @@
 /*Object.create replication - base of any prototypical inheritance*/
 
-var object = function(o){
-	var F = function(){};
+var object = o => {
+	var F = () => {};
 	F.prototype = o;
 	return new F();
 };
 
 var parent = {
 	lastName : "sharma",
-	getLastName : function(){
+	getLastName() {
 		return this.lastName;
 	}
 };
@@ -17,7 +17,7 @@ var Teacher = function(){
 	this.name = "Adam";
 };
 
-Teacher.prototype.taught = function(){
+Teacher.prototype.taught = () => {
 	console.log("maths");
 };
 
